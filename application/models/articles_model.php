@@ -48,6 +48,12 @@ class Articles_model extends CI_Model
         $str = substr($str, 0, $i);
     }
 
+    public function mb_ucfirst($str)
+    {
+        $fc = mb_strtoupper(mb_substr($str, 0, 1));
+        return $fc . mb_substr($str, 1);
+    }
+
     public function save_form_data_to_db()
     {
         $filesTemplatesNames['ru'] = APPPATH . "/views/ru template.html";
@@ -81,13 +87,21 @@ class Articles_model extends CI_Model
         $fileName = trim($_POST['fileName']);
         $this->del_first_dashes($fileName);
         $this->del_last_dashes($fileName);
+
         $title = trim($_POST['title']);
+        $title = $this->mb_ucfirst($title);
+
         $description = trim($_POST['description']);
+        $description = $this->mb_ucfirst($description);
+
         $h1 = trim($_POST['h1']);
+        $h1 = $this->mb_ucfirst($h1);
+
         $text = '';
 
         if (isset($_POST['text']) && ($_POST['text'] != '')) {
             $text = trim($_POST['text']);
+            $text = $this->mb_ucfirst($text);
         }
 
         $data = array(

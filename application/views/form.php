@@ -79,7 +79,6 @@
         <div class="form-check">
             <div class="col-sm-12">
                 <input class="form-check-input" type="checkbox" value="" id="showPlaceholders"
-                       checked
                        name="showPlaceholders">
                 <label class="form-check-label" for="showPlaceholders">
                     show placeholders
@@ -114,6 +113,7 @@
 </form>
 
 <script>
+
 
     // document.getElementById('title').onchange = function () {
     //     alert(1);
@@ -294,21 +294,25 @@
             document.getElementById('text').innerText = '';
         };
 
-    document.getElementById('showPlaceholders').onchange =
-        function () {
-            if (document.getElementById('showPlaceholders').checked === true) {
-                document.getElementById('fileName').setAttribute('placeholder', 'registratsiya-lekarstvennyh-sredstv-v-ukraine-registratsiya-lekarstv');
-                document.getElementById('title').setAttribute('placeholder', 'Регистрация лекарственных средств в Украине, регистрация лекарств');
-                document.getElementById('description').setAttribute('placeholder', 'В соответствии с Законом Украины «О лекарственных средствах» обращение лекарственных средств на территории Украины возможно только после прохождения процедуры государственной регистрации.');
-                document.getElementById('h1').setAttribute('placeholder', 'Государственная регистрация лекарственных средств в Украине');
-                document.getElementById('text').setAttribute('placeholder', '');
-            }
-            else {
-                document.getElementById('fileName').setAttribute('placeholder', '');
-                document.getElementById('title').setAttribute('placeholder', '');
-                document.getElementById('description').setAttribute('placeholder', '');
-                document.getElementById('h1').setAttribute('placeholder', '');
-                document.getElementById('text').setAttribute('placeholder', '');
-            }
+    function showPlaceholders() {
+        if (document.getElementById('showPlaceholders').checked === true) {
+            document.getElementById('fileName').setAttribute('placeholder', 'registratsiya-lekarstvennyh-sredstv-v-ukraine-registratsiya-lekarstv');
+            document.getElementById('title').setAttribute('placeholder', 'Регистрация лекарственных средств в Украине, регистрация лекарств');
+            document.getElementById('description').setAttribute('placeholder', 'В соответствии с Законом Украины «О лекарственных средствах» обращение лекарственных средств на территории Украины возможно только после прохождения процедуры государственной регистрации.');
+            document.getElementById('h1').setAttribute('placeholder', 'Государственная регистрация лекарственных средств в Украине');
+            document.getElementById('text').setAttribute('placeholder', '');
         }
+        else {
+            document.getElementById('fileName').setAttribute('placeholder', '');
+            document.getElementById('title').setAttribute('placeholder', '');
+            document.getElementById('description').setAttribute('placeholder', '');
+            document.getElementById('h1').setAttribute('placeholder', '');
+            document.getElementById('text').setAttribute('placeholder', '');
+        }
+    };
+
+    document.getElementById('showPlaceholders').onchange = showPlaceholders;
+
+    showPlaceholders();
+
 </script>
