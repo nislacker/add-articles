@@ -2,20 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e96b91a1-3cae-4f8b-ad88-d541663554c9" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/application/controllers/Form.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/views/templates/footer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/config/routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/config/routes.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/Pages.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/models/articles_model.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/models/articles_model.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/create_articles.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/create_articles.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/views/form.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/form.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/ru/1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/ru/цук.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/ua/1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/ua/цук.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/welcome_message.php" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -29,16 +17,39 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="articles_model.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="articles_model.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/models/articles_model.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="118" column="5" selection-start-line="118" selection-start-column="5" selection-end-line="118" selection-end-column="5" />
+            <state relative-caret-position="308">
+              <caret line="119" column="1" lean-forward="true" selection-start-line="119" selection-start-column="1" selection-end-line="119" selection-end-column="1" />
               <folding>
                 <element signature="n#get_articles#0;n#Articles_model#0;n#!!top" />
                 <element signature="n#save_form_data_to_db#0;n#Articles_model#0;n#!!top" />
                 <element signature="n#save_db_data_to_files#0;n#Articles_model#0;n#!!top" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="autoload.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/config/autoload.php">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="create_articles.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/create_articles.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-418">
+              <caret line="32" column="12" lean-forward="true" selection-start-line="32" selection-start-column="12" selection-end-line="32" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="form.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/views/form.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="326">
+              <caret line="234" column="29" lean-forward="true" selection-start-line="234" selection-start-column="29" selection-end-line="234" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -51,6 +62,7 @@
       <find>$article_data</find>
       <find>Add</find>
       <find>save_db_data_to_files</find>
+      <find>file na</find>
     </findStrings>
     <replaceStrings>
       <replace>$article_value</replace>
@@ -69,8 +81,8 @@
         <option value="$PROJECT_DIR$/application/controllers/Form.php" />
         <option value="$PROJECT_DIR$/application/views/create_articles.php" />
         <option value="$PROJECT_DIR$/application/config/routes.php" />
-        <option value="$PROJECT_DIR$/application/views/form.php" />
         <option value="$PROJECT_DIR$/application/models/articles_model.php" />
+        <option value="$PROJECT_DIR$/application/views/form.php" />
       </list>
     </option>
   </component>
@@ -84,10 +96,10 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-14" />
+    <option name="x" value="437" />
     <option name="y" value="-16" />
-    <option name="width" value="1941" />
-    <option name="height" value="1058" />
+    <option name="width" value="1095" />
+    <option name="height" value="989" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -112,6 +124,26 @@
               <item name="add-articles" type="462c0819:PsiDirectoryNode" />
               <item name="application" type="462c0819:PsiDirectoryNode" />
               <item name="models" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="add-articles" type="b2602c69:ProjectViewProjectNode" />
+              <item name="add-articles" type="462c0819:PsiDirectoryNode" />
+              <item name="application" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="add-articles" type="b2602c69:ProjectViewProjectNode" />
+              <item name="add-articles" type="462c0819:PsiDirectoryNode" />
+              <item name="application" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="ru" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="add-articles" type="b2602c69:ProjectViewProjectNode" />
+              <item name="add-articles" type="462c0819:PsiDirectoryNode" />
+              <item name="application" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="ua" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -146,18 +178,18 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1562502048671</updated>
-      <workItem from="1562502051118" duration="17903000" />
+      <workItem from="1562502051118" duration="21012000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17903000" />
+    <option name="totallyTimeSpent" value="21012000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1753" height="954" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17935103" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17935103" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
@@ -166,7 +198,7 @@
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" weight="0.32885087" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" visible="true" weight="0.32762837" />
+      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.34841076" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" side_tool="true" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -261,13 +293,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/create_articles.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="704">
-          <caret line="32" column="12" lean-forward="true" selection-start-line="32" selection-start-column="12" selection-end-line="32" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/config/routes.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="286">
@@ -275,25 +300,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/form.php">
+    <entry file="file://$PROJECT_DIR$/application/config/autoload.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/create_articles.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="21" column="14" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
-          <folding>
-            <element signature="n#form#0;n#body#0;n#html#0;n#!!top" />
-          </folding>
+        <state relative-caret-position="-418">
+          <caret line="32" column="12" lean-forward="true" selection-start-line="32" selection-start-column="12" selection-end-line="32" selection-end-column="12" />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/ua/registratsiya-lekarstvennyh-sredstv-v-ukraine-registratsiya-lekarstv.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-528" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/ru/registratsiya-lekarstvennyh-sredstv-v-ukraine-registratsiya-lekarstv.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-660" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/models/articles_model.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="118" column="5" selection-start-line="118" selection-start-column="5" selection-end-line="118" selection-end-column="5" />
+        <state relative-caret-position="308">
+          <caret line="119" column="1" lean-forward="true" selection-start-line="119" selection-start-column="1" selection-end-line="119" selection-end-column="1" />
           <folding>
             <element signature="n#get_articles#0;n#Articles_model#0;n#!!top" />
             <element signature="n#save_form_data_to_db#0;n#Articles_model#0;n#!!top" />
             <element signature="n#save_db_data_to_files#0;n#Articles_model#0;n#!!top" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/form.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="326">
+          <caret line="234" column="29" lean-forward="true" selection-start-line="234" selection-start-column="29" selection-end-line="234" selection-end-column="29" />
         </state>
       </provider>
     </entry>
