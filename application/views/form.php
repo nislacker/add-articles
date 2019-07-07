@@ -20,6 +20,7 @@
 <body>
 
 <form method="post">
+
     <div class="form-group row">
         <label for="fileName" class="col-sm-2 col-form-label">File name: </label>
         <div class="col-sm-10">
@@ -30,6 +31,7 @@
                    value="<?= isset($_POST['fileName']) ? $_POST['fileName'] : '' ?>">
         </div>
     </div>
+
     <div class="form-group row">
         <label for="title" class="col-sm-2 col-form-label">Title: </label>
         <div class="col-sm-10">
@@ -40,6 +42,7 @@
                    value="<?= isset($_POST['title']) ? $_POST['title'] : '' ?>">
         </div>
     </div>
+
     <div class="form-group row">
         <label for="description" class="col-sm-2 col-form-label">Description: </label>
         <div class="col-sm-10">
@@ -69,24 +72,11 @@
                   rows="10"><?= isset($_POST['text']) ? $_POST['text'] : '' ?></textarea>
         </div>
     </div>
+
     <div class="form-group row">
         <div class="col-sm-2"></div>
-        <div class="col-sm-2">
-            <input type="submit" class="btn btn-success btn-lg btn-primary"
-                   name="submit" id="submit"
-                   value="Add article to DB">
-        </div>
-
-        <div class="col-sm-1"></div>
-        <div class="col-sm-1">
-            <input type="button" class="btn btn-secondary btn-lg"
-                   name="submit" id="createArticlesFromDB"
-                   value="Create new article(s) from DB">
-        </div>
-
-        <div class="form-check col-sm-4">
-            <div class="col-sm-8"></div>
-            <div class="col-sm-4 float-right">
+        <div class="form-check">
+            <div class="col-sm-12">
                 <input class="form-check-input" type="checkbox" value="" id="showPlaceholders"
                        checked
                        name="showPlaceholders">
@@ -95,12 +85,31 @@
                 </label>
             </div>
         </div>
-        <div class="col-sm-2">
-            <input type="reset" class="btn btn-danger btn-lg float-right"
-                   name="reset" id="reset"
-                   value="Clear form">
+    </div>
+
+    <div class="form-group row">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-3">
+            <button type="submit" class="btn btn-success btn-lg btn-primary"
+                    name="submit" id="submit">Add article to DB
+            </button>
+        </div>
+
+        <div class="col-sm-4 text-center">
+            <a onclick="return false" href="http://add-articles/create">
+                <button type="button" class="btn btn-secondary btn-lg"
+                        name="submit" id="createArticlesFromDB">Create new article(s) from DB
+                </button>
+            </a>
+        </div>
+
+        <div class="col-sm-3">
+            <button type="reset" class="btn btn-danger btn-lg float-right"
+                    name="reset" id="reset">Clear form
+            </button>
         </div>
     </div>
+
 </form>
 
 <script>
@@ -113,11 +122,13 @@
             (document.getElementById('text').value !== '')) {
 
             if (confirm('Form is not empty. Are you sure to go creating article(s) from DB?')) {
-                window.location.replace(window.location.origin + '/create');
+                window.location.href = window.location.origin + '/create';
+                // window.open(window.location.origin + '/create', '_self');
             }
         }
         else {
-            window.location.replace(window.location.origin + '/create');
+            window.location.href = window.location.origin + '/create';
+            // window.open(window.location.origin + '/create', '_self');
         }
     };
 
@@ -132,8 +143,7 @@
 
     document.getElementById('showPlaceholders').onchange =
         function () {
-            checkboxShowPlaceholders = document.getElementById('showPlaceholders');
-            if (checkboxShowPlaceholders.checked === true) {
+            if (document.getElementById('showPlaceholders').checked === true) {
                 document.getElementById('fileName').setAttribute('placeholder', 'registratsiya-lekarstvennyh-sredstv-v-ukraine-registratsiya-lekarstv');
                 document.getElementById('title').setAttribute('placeholder', 'Регистрация лекарственных средств в Украине, регистрация лекарств');
                 document.getElementById('description').setAttribute('placeholder', 'В соответствии с Законом Украины «О лекарственных средствах» обращение лекарственных средств на территории Украины возможно только после прохождения процедуры государственной регистрации.');
