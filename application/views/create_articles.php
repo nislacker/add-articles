@@ -18,8 +18,7 @@
         }
 
         legend.border {
-            border: 1px groove #ddd !important;
-            margin: 0 0 1.5em 0 !important;
+            margin: 0 0 1em 0 !important;
             -webkit-box-shadow: 0px 0px 0px 0px #000;
             box-shadow: 0px 0px 0px 0px #000;
 
@@ -28,7 +27,7 @@
             border-bottom: none;
         }
 
-        #index1, #index2 {
+        #start_index {
             width: 80px;
         }
     </style>
@@ -36,6 +35,16 @@
 <body>
 
 <?php if (count($articles) > 0): ?>
+
+    <form action="create_articles_from_DB" method="post" class="form col-sm-5">
+        <fieldset class="border">
+            <legend class="border">Выбор строк БД для генерации статей</legend>
+            <label for="start_index">От id = </label>
+            <input type="number" id="start_index" name="start_index"
+                   value="<?= isset($_POST['start_index']) ? $_POST['start_index'] : '' ?>">
+            <button type="submit" name="submit">Создать файлы статей!</button>
+        </fieldset>
+    </form>
 
     <table class="table table-striped">
         <thead>
@@ -62,19 +71,6 @@
         <?php endforeach; ?>
         </tbody>
     </table>
-
-    <form action="" method="post" class="form col-sm-8">
-        <fieldset class="border">
-            <legend>Выбор строк БД для генерации статей</legend>
-            <label for="index1">От id = </label>
-            <input type="number" id="index1" name="index1"
-                   value="<?= isset($_POST['index1']) ? $_POST['index1'] : '' ?>">
-            <label for="index2">, до id = </label>
-            <input type="number" id="index2" name="index2"
-                   value="<?= isset($_POST['index2']) ? $_POST['index2'] : '' ?>">
-            <button type="submit">Создать файлы статей!</button>
-        </fieldset>
-    </form>
 
 <?php else: ?>
     <p>В БД пока нет ни одной статьи...</p>
