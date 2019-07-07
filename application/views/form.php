@@ -38,6 +38,7 @@
         <div class="col-sm-10">
             <input type="text" class="form-control"
                    id="title" name="title"
+                   autocomplete="off"
                    placeholder="Регистрация лекарственных средств в Украине, регистрация лекарств"
                    size="75" maxlength="200"
                    value="<?= isset($_POST['title']) ? $_POST['title'] : '' ?>">
@@ -49,6 +50,7 @@
         <div class="col-sm-10">
             <input type="text" class="form-control"
                    id="h1" name="h1"
+                   autocomplete="off"
                    placeholder="Государственная регистрация лекарственных средств в Украине"
                    size="60" maxlength="200"
                    value="<?= isset($_POST['h1']) ? $_POST['h1'] : '' ?>">
