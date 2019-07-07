@@ -45,16 +45,6 @@
     </div>
 
     <div class="form-group row">
-        <label for="description" class="col-sm-2 col-form-label">Description: </label>
-        <div class="col-sm-10">
-        <textarea name="description" class="form-control"
-                  id="description" cols="40" rows="10"
-                  placeholder="В соответствии с Законом Украины «О лекарственных средствах» обращение лекарственных средств на территории Украины возможно только после прохождения процедуры государственной регистрации."
-                  maxlength="500"><?= isset($_POST['description']) ? $_POST['description'] : '' ?></textarea>
-        </div>
-    </div>
-
-    <div class="form-group row">
         <label for="h1" class="col-sm-2 col-form-label">H1: </label>
         <div class="col-sm-10">
             <input type="text" class="form-control"
@@ -62,6 +52,16 @@
                    placeholder="Государственная регистрация лекарственных средств в Украине"
                    size="60" maxlength="200"
                    value="<?= isset($_POST['h1']) ? $_POST['h1'] : '' ?>">
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label for="description" class="col-sm-2 col-form-label">Description: </label>
+        <div class="col-sm-10">
+        <textarea name="description" class="form-control"
+                  id="description" cols="40" rows="10"
+                  placeholder="В соответствии с Законом Украины «О лекарственных средствах» обращение лекарственных средств на территории Украины возможно только после прохождения процедуры государственной регистрации."
+                  maxlength="500"><?= isset($_POST['description']) ? $_POST['description'] : '' ?></textarea>
         </div>
     </div>
 
