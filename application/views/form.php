@@ -121,11 +121,11 @@
 
             // укр. алфавит
             transl['Ґ'] = 'g';
-            transl['Є'] = 'Ie';
-            transl['є'] = 'a';
-            transl['І'] = 'I';
+            transl['Є'] = 'ie';
+            transl['є'] = 'ie';
+            transl['І'] = 'i';
             transl['і'] = 'i';
-            transl['Ї'] = 'I';
+            transl['Ї'] = 'i';
             transl['ї'] = 'i';
 
             // рус. алфавит
