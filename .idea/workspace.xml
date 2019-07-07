@@ -2,13 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e96b91a1-3cae-4f8b-ad88-d541663554c9" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/add-articles.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/form.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/form.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/controllers/Pages.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Pages.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/models/articles_model.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/models/articles_model.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/create_articles.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/create_articles.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -22,11 +20,38 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="form.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="form.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/form.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2926">
-              <caret line="131" column="9" selection-start-line="131" selection-start-column="9" selection-end-line="131" selection-end-column="9" />
+            <state relative-caret-position="66">
+              <caret line="3" selection-start-line="3" selection-end-line="10" selection-end-column="41" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Pages.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/controllers/Pages.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="396">
+              <caret line="18" column="59" selection-start-line="18" selection-start-column="59" selection-end-line="18" selection-end-column="59" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="create_articles.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/views/create_articles.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="400">
+              <caret line="15" column="27" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="articles_model.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/models/articles_model.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="286">
+              <caret line="13" column="42" selection-start-line="13" selection-start-column="42" selection-end-line="13" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -36,7 +61,11 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>window</find>
+      <find>$article_data</find>
     </findStrings>
+    <replaceStrings>
+      <replace>$article_value</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -45,6 +74,10 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/application/views/form.php" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/application/controllers/Pages.php" />
+        <option value="$PROJECT_DIR$/application/models/articles_model.php" />
+        <option value="$PROJECT_DIR$/application/views/create_articles.php" />
       </list>
     </option>
   </component>
@@ -57,8 +90,9 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="-8" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-14" />
+    <option name="y" value="-16" />
     <option name="width" value="1941" />
     <option name="height" value="1058" />
   </component>
@@ -79,6 +113,18 @@
               <item name="add-articles" type="b2602c69:ProjectViewProjectNode" />
               <item name="add-articles" type="462c0819:PsiDirectoryNode" />
               <item name="application" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="add-articles" type="b2602c69:ProjectViewProjectNode" />
+              <item name="add-articles" type="462c0819:PsiDirectoryNode" />
+              <item name="application" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="add-articles" type="b2602c69:ProjectViewProjectNode" />
+              <item name="add-articles" type="462c0819:PsiDirectoryNode" />
+              <item name="application" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="add-articles" type="b2602c69:ProjectViewProjectNode" />
@@ -119,18 +165,18 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1562502048671</updated>
-      <workItem from="1562502051118" duration="2965000" />
+      <workItem from="1562502051118" duration="8481000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2965000" />
+    <option name="totallyTimeSpent" value="8481000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="0" width="1757" height="958" extended-state="1" />
+    <frame x="-7" y="-7" width="1753" height="954" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24896999" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24955752" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
@@ -139,7 +185,7 @@
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" weight="0.32885087" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" weight="0.32885087" />
+      <window_info anchor="bottom" id="Terminal" weight="0.32846716" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" side_tool="true" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -184,10 +230,38 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="6" lean-forward="true" selection-start-column="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/form.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2926">
-          <caret line="131" column="9" selection-start-line="131" selection-start-column="9" selection-end-line="131" selection-end-column="9" />
+        <state relative-caret-position="66">
+          <caret line="3" selection-start-line="3" selection-end-line="10" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/Pages.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="18" column="59" selection-start-line="18" selection-start-column="59" selection-end-line="18" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/articles_model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="13" column="42" selection-start-line="13" selection-start-column="42" selection-end-line="13" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/create_articles.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="15" column="27" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
         </state>
       </provider>
     </entry>
