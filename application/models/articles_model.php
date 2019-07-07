@@ -18,6 +18,36 @@ class Articles_model extends CI_Model
         return $query->row_array();
     }
 
+    public function del_first_dashes(&$str)
+    {
+        $i = 0;
+
+        if (strlen($str) < 2) {
+            return;
+        }
+
+        while ($str[$i] === '-') {
+            $i++;
+        }
+
+        $str = substr($str, $i);
+    }
+
+    public function del_last_dashes(&$str)
+    {
+        $i = strlen($str) - 1;
+
+        if ($i < 1) {
+            return;
+        }
+
+        while ($str[$i] === '-') {
+            $i--;
+        }
+
+        $str = substr($str, 0, $i);
+    }
+
     public function save_form_data_to_db()
     {
         $filesTemplatesNames['ru'] = APPPATH . "/views/ru template.html";
@@ -49,6 +79,8 @@ class Articles_model extends CI_Model
         }
 
         $fileName = trim($_POST['fileName']);
+        $this->del_first_dashes($fileName);
+        $this->del_last_dashes($fileName);
         $title = trim($_POST['title']);
         $description = trim($_POST['description']);
         $h1 = trim($_POST['h1']);
