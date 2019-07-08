@@ -64,6 +64,16 @@ class Articles_model extends CI_Model
             die;
         }
 
+        if (!isset($_POST['creator']) || ($_POST['creator'] == '')) {
+            echo 'Введи Creator';
+            die;
+        }
+
+        if (!isset($_POST['author']) || ($_POST['author'] == '')) {
+            echo 'Введи Author';
+            die;
+        }
+
         if (!isset($_POST['fileName']) || ($_POST['fileName'] == '')) {
             echo 'Введи "File name"';
             die;
@@ -91,6 +101,19 @@ class Articles_model extends CI_Model
         $title = trim($_POST['title']);
         $title = $this->mb_ucfirst($title);
 
+        $creator = trim($_POST['creator']);
+        $creator = $this->mb_ucfirst($creator);
+
+        $author = trim($_POST['author']);
+        $author = $this->mb_ucfirst($author);
+
+        $country = trim($_POST['country']);
+
+        $title = trim($_POST['title']);
+        $title = $this->mb_ucfirst($title);
+
+        $breadcrumb = trim($_POST['breadcrumb']);
+
         $description = trim($_POST['description']);
         $description = $this->mb_ucfirst($description);
 
@@ -106,9 +129,13 @@ class Articles_model extends CI_Model
 
         $data = array(
             'file_name' => $fileName,
+            'creator' => $creator,
+            'author' => $author,
+            'country' => $country,
             'title' => $title,
-            'description' => $description,
+            'breadcrumb' => $breadcrumb,
             'h1' => $h1,
+            'description' => $description,
             'text' => $text
         );
 
@@ -117,6 +144,19 @@ class Articles_model extends CI_Model
 
     public function save_db_data_to_files($start_id = 1)
     {
+//        $countries = ['ua','ru','kz','by','ge'];
+
+//        if (mkdir("/views/kz", 0777))
+//        {
+//            echo "Directory created!";
+//        }
+//        else
+//        {
+//            echo "Error!";
+//        }
+//
+//        die;
+
         $filesTemplatesNames['ru'] = APPPATH . "/views/ru template.html";
         $filesTemplatesNames['ua'] = APPPATH . "/views/ua template.html";
 

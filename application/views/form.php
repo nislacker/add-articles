@@ -27,9 +27,43 @@
             <input type="text" class="form-control"
                    id="fileName" name="fileName"
                    readonly
-                   placeholder="registratsiya-lekarstvennyh-sredstv-v-ukraine-registratsiya-lekarstv"
                    size="75" maxlength="256"
                    value="<?= isset($_POST['fileName']) ? $_POST['fileName'] : '' ?>">
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label for="creator" class="col-sm-2 col-form-label">Creator: </label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control"
+                   id="creator" name="creator"
+                   required
+                   size="75" maxlength="200"
+                   value="<?= isset($_POST['creator']) ? $_POST['creator'] : '' ?>">
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label for="author" class="col-sm-2 col-form-label">Author: </label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control"
+                   id="author" name="author"
+                   required
+                   size="75" maxlength="200"
+                   value="<?= isset($_POST['author']) ? $_POST['author'] : '' ?>">
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label for="country" class="col-sm-2">Country - WebSite: </label>
+        <div class="col-sm-10">
+            <select class="form-control" id="country" name="country">
+                <option selected>ua - Ukraine - Украина</option>
+                <option>ru - Russia - Россия</option>
+                <option>kz - Kazakhstan - Казахстан</option>
+                <option>by - Belarus - Беларусь</option>
+                <option>ge - Georgia - Грузия</option>
+            </select>
         </div>
     </div>
 
@@ -39,9 +73,21 @@
             <input type="text" class="form-control"
                    id="title" name="title"
                    autocomplete="off"
-                   placeholder="Регистрация лекарственных средств в Украине, регистрация лекарств"
+                   required
                    size="75" maxlength="200"
                    value="<?= isset($_POST['title']) ? $_POST['title'] : '' ?>">
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label for="breadcrumb" class="col-sm-2 col-form-label">Breadcrumb: </label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control"
+                   id="breadcrumb" name="breadcrumb"
+                   autocomplete="off"
+                   required
+                   size="60" maxlength="200"
+                   value="<?= isset($_POST['breadcrumb']) ? $_POST['breadcrumb'] : '' ?>">
         </div>
     </div>
 
@@ -51,7 +97,7 @@
             <input type="text" class="form-control"
                    id="h1" name="h1"
                    autocomplete="off"
-                   placeholder="Государственная регистрация лекарственных средств в Украине"
+                   required
                    size="60" maxlength="200"
                    value="<?= isset($_POST['h1']) ? $_POST['h1'] : '' ?>">
         </div>
@@ -62,7 +108,7 @@
         <div class="col-sm-10">
         <textarea name="description" class="form-control"
                   id="description" cols="40" rows="10"
-                  placeholder="В соответствии с Законом Украины «О лекарственных средствах» обращение лекарственных средств на территории Украины возможно только после прохождения процедуры государственной регистрации."
+                  required
                   maxlength="500"><?= isset($_POST['description']) ? $_POST['description'] : '' ?></textarea>
         </div>
     </div>
@@ -261,8 +307,7 @@
         for (let i = 0; i < text.length; i++) {
             if (transl[text[i]] !== undefined) {
                 result += transl[text[i]];
-            }
-            else {
+            } else {
                 result += text[i];
             }
         }
@@ -271,8 +316,11 @@
 
     document.getElementById('createArticlesFromDB').onclick = function () {
         if ((document.getElementById('fileName').value !== '') ||
+            (document.getElementById('creator').value !== '') ||
+            (document.getElementById('author').value !== '') ||
             (document.getElementById('title').value !== '') ||
             (document.getElementById('description').value !== '') ||
+            (document.getElementById('breadcrumb').value !== '') ||
             (document.getElementById('h1').value !== '') ||
             (document.getElementById('text').value !== '')) {
 
@@ -280,8 +328,7 @@
                 window.location.href = window.location.origin + '/create';
                 // window.open(window.location.origin + '/create', '_self');
             }
-        }
-        else {
+        } else {
             window.location.href = window.location.origin + '/create';
             // window.open(window.location.origin + '/create', '_self');
         }
@@ -290,8 +337,11 @@
     document.getElementById('reset').onclick =
         function () {
             document.getElementById('fileName').setAttribute('value', '');
+            document.getElementById('creator').setAttribute('value', '');
+            document.getElementById('author').setAttribute('value', '');
             document.getElementById('title').setAttribute('value', '');
             document.getElementById('description').innerText = '';
+            document.getElementById('breadcrumb').setAttribute('value', '');
             document.getElementById('h1').setAttribute('value', '');
             document.getElementById('text').innerText = '';
         };
@@ -299,22 +349,27 @@
     function showPlaceholders() {
         if (document.getElementById('showPlaceholders').checked === true) {
             document.getElementById('fileName').setAttribute('placeholder', 'registratsiya-lekarstvennyh-sredstv-v-ukraine-registratsiya-lekarstv');
+            document.getElementById('creator').setAttribute('placeholder', 'Robert Brown');
+            document.getElementById('author').setAttribute('placeholder', 'Linda Moore');
             document.getElementById('title').setAttribute('placeholder', 'Регистрация лекарственных средств в Украине, регистрация лекарств');
-            document.getElementById('description').setAttribute('placeholder', 'В соответствии с Законом Украины «О лекарственных средствах» обращение лекарственных средств на территории Украины возможно только после прохождения процедуры государственной регистрации.');
+            document.getElementById('breadcrumb').setAttribute('placeholder', 'Государственная регистрация лекарственных средств в Украине');
             document.getElementById('h1').setAttribute('placeholder', 'Государственная регистрация лекарственных средств в Украине');
+            document.getElementById('description').setAttribute('placeholder', 'В соответствии с Законом Украины «О лекарственных средствах» обращение лекарственных средств на территории Украины возможно только после прохождения процедуры государственной регистрации.');
             document.getElementById('text').setAttribute('placeholder', '');
-        }
-        else {
+        } else {
             document.getElementById('fileName').setAttribute('placeholder', '');
+            document.getElementById('creator').setAttribute('placeholder', '');
+            document.getElementById('author').setAttribute('placeholder', '');
             document.getElementById('title').setAttribute('placeholder', '');
-            document.getElementById('description').setAttribute('placeholder', '');
+            document.getElementById('breadcrumb').setAttribute('placeholder', '');
             document.getElementById('h1').setAttribute('placeholder', '');
+            document.getElementById('description').setAttribute('placeholder', '');
             document.getElementById('text').setAttribute('placeholder', '');
         }
     };
 
     document.getElementById('showPlaceholders').onchange = showPlaceholders;
 
-    showPlaceholders();
+    // showPlaceholders();
 
 </script>
